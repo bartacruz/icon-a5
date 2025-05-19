@@ -75,6 +75,21 @@
       <name type="string">Avionics</name>
       <prop type="string">/systems/electrical/outputs/avionics</prop>
     </component>
+    <component>
+      <kind type="string">output</kind>
+      <name type="string">Comm</name>
+      <prop type="string">/systems/electrical/outputs/comm</prop>
+    </component>
+    <component>
+      <kind type="string">output</kind>
+      <name type="string">Transponder</name>
+      <prop type="string">/systems/electrical/outputs/transponder</prop>
+    </component>
+    <component>
+      <kind type="string">output</kind>
+      <name type="string">Gps</name>
+      <prop type="string">/systems/electrical/outputs/gps</prop>
+    </component>
 
     <!-- Connectors -->
 
@@ -135,7 +150,18 @@
       <input type="string">Primary bus</input>
       <output type="string">Avionics</output>
     </connector>
-
+    <connector>
+      <input type="string">Avionics</input>
+      <output type="string">Comm</output>
+    </connector>
+    <connector>
+      <input type="string">Avionics</input>
+      <output type="string">Transponder</output>
+    </connector>
+    <connector>
+      <input type="string">Avionics</input>
+      <output type="string">Gps</output>
+    </connector>
   </electrical>
 
 </PropertyList>

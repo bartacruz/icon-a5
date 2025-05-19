@@ -59,7 +59,7 @@ var update=func {
     update_oil();
     update_cht();
     update_aoa();
-    settimer(update,0);
+    settimer(update,0.2);
 };
 
 var init=func {

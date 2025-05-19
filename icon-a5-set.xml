@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<PropertyList>
+<PropertyList  include="Systems/icon-a5-base.xml">
 
   <sim>
     <description>Icon A5 amphibious light sport aircraft</description>
@@ -77,37 +77,8 @@
     </fuel>
   </consumables>
 
-  <controls>
-    <key type="int">0</key>
-    <gear>
-      <brake-parking type="double">1</brake-parking>
-      <gear-down-actual type="bool">true</gear-down-actual>
-    </gear>
-    <switches>
-      <seawings type="int">0</seawings>
-      <headlights type="int">0</headlights>
-      <taxi type="int">0</taxi>
-      <cockpit type="int">1</cockpit>
-      <bilge type="int">0</bilge>
-      <master type="int">0</master>
-    </switches>
-  </controls>
-
-  <limits>
-    <vne>120</vne>
-    
-    <max-positive-g>2.5</max-positive-g>
-    <max-negative-g>-0.5</max-negative-g>
-    
-  </limits>
-
   <nasal>
-    <a5>
-      <file>Aircraft/icon-a5/Nasal/electrical.nas</file>
-      <file>Aircraft/icon-a5/Nasal/util.nas</file>
-      <file>Aircraft/icon-a5/Nasal/misc.nas</file>
-      <file>Aircraft/Generic/limits.nas</file>
-    </a5>
+  
   </nasal>
 
 </PropertyList>

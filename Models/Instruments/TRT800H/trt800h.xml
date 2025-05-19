@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<PropertyList>
+	<path>trt800h.ac</path>
+	
+	<params>
+		<cursor-sel type="string">instrumentation/transponder/cursor-selection</cursor-sel>
+	</params>
+	
+	<effect>
+		<inherits-from>Effects/model-interior-display</inherits-from>
+		<parameters>
+			<dirt-factor>1.0</dirt-factor>
+			<contrast>0.75</contrast>
+		</parameters>
+		<object-name>trt800h.display</object-name>
+	</effect>
+	
+	<animation>
+		<type>material</type>
+		<object-name>trt800h.display</object-name>
+		<emission>
+			<red>   1.0 </red>
+			<green> 1.0 </green>
+			<blue>  1.0 </blue>
+			<factor-prop>/instrumentation/transponder/brightness</factor-prop>
+		</emission>
+	</animation>
+	<animation>
+		<type>knob</type>
+		<object-name>trt800h.knob</object-name>
+		<property>instrumentation/trt800h/knob</property>
+		<axis>
+			<x>-1</x>
+		</axis>
+		<center>
+			<y-m> 0.023</y-m>
+			<z-m>-0.023</z-m>
+		</center>
+		<action>
+			<binding>
+				<command>property-adjust</command>
+				<property>instrumentation/trt800h/knob</property>
+				<factor>1</factor>
+				<min>0</min>
+				<max>360</max>
+				<wrap>1</wrap>
+			</binding>
+			<binding>
+				<condition>
+					<not-equals>
+						<property alias="../../../../../../params/cursor-sel"/>
+						<value>0</value>
+					</not-equals>
+				</condition>
+				<command>nasal</command>
+				<script>
+					var code = getprop( "/instrumentation/transponder/id-code-sby" );
+					var cursor = getprop( "/instrumentation/transponder/cursor-selection" ) - 1;
+					var digits = [
+						math.floor( code / 1000 ),
+						math.floor( math.mod( code, 1000 ) / 100 ),
+						math.floor( math.mod( code, 100  ) / 10  ),
+						math.mod( code, 10   ),
+					];
+					digits[cursor] += cmdarg().getNode('offset').getValue();
+					if( digits[cursor] ==  8 ){ digits[cursor] = 0 };
+					if( digits[cursor] == -1 ){ digits[cursor] = 7 };
+					setprop( "/instrumentation/transponder/id-code-sby", digits[0] * 1000 + digits[1] * 100 + digits[2] * 10 + digits[3] );
+				</script>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<object-name>trt800h.io_btn</object-name>
+		<action>
+			<button>0</button>
+			<binding>
+				<command>nasal</command>
+				<script>trt800h.io_btn(1);</script>
+			</binding>
+			<binding>
+				<command>property-assign</command>
+				<property>instrumentation/trt800h/io-btn</property>
+				<value>1</value>
+			</binding>
+			<mod-up>
+				<binding>
+					<command>nasal</command>
+					<script>trt800h.io_btn(0);</script>
+				</binding>
+				<binding>
+					<command>property-assign</command>
+					<property>instrumentation/trt800h/io-btn</property>
+					<value>0</value>
+				</binding>
+			</mod-up>
+		</action>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>trt800h.io_btn</object-name>
+		<property>instrumentation/trt800h/io-btn</property>
+		<factor>-0.001</factor>
+		<axis>
+			<x>1</x>
+		</axis>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<object-name>trt800h.id_btn</object-name>
+		<action>
+			<button>0</button>
+			<binding>
+				<command>property-assign</command>
+				<property>instrumentation/transponder/inputs/ident-btn</property>
+				<value>1</value>
+			</binding>
+			<mod-up>
+				<binding>
+					<command>property-assign</command>
+					<property>instrumentation/transponder/inputs/ident-btn</property>
+					<value>0</value>
+				</binding>
+			</mod-up>
+		</action>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>trt800h.id_btn</object-name>
+		<property>instrumentation/transponder/inputs/ident-btn</property>
+		<factor>-0.001</factor>
+		<axis>
+			<x>1</x>
+		</axis>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<object-name>trt800h.cursor_btn</object-name>
+		<action>
+			<button>0</button>
+			<binding>
+				<command>property-adjust</command>
+				<property alias="../../../../params/cursor-sel"/>
+				<step>1</step>
+				<min>0</min>
+				<max>4.1</max>
+				<wrap>1</wrap>
+			</binding>
+			<binding>
+				<command>property-assign</command>
+				<property>instrumentation/trt800h/cursor-btn</property>
+				<value>1</value>
+			</binding>
+			<mod-up>
+				<binding>
+					<command>property-assign</command>
+					<property>instrumentation/trt800h/cursor-btn</property>
+					<value>0</value>
+				</binding>
+			</mod-up>
+		</action>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>trt800h.cursor_btn</object-name>
+		<property>instrumentation/trt800h/cursor-btn</property>
+		<factor>-0.001</factor>
+		<axis>
+			<x>1</x>
+		</axis>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<object-name>trt800h.swap_btn</object-name>
+		<action>
+			<button>0</button>
+			<binding>
+				<command>nasal</command>
+				<script>trt800h.swap_btn();</script>
+			</binding>
+			<binding>
+				<command>property-assign</command>
+				<property>instrumentation/trt800h/swap-btn</property>
+				<value>1</value>
+			</binding>
+			<mod-up>
+				<binding>
+					<command>property-assign</command>
+					<property>instrumentation/trt800h/swap-btn</property>
+					<value>0</value>
+				</binding>
+			</mod-up>
+		</action>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>trt800h.swap_btn</object-name>
+		<property>instrumentation/trt800h/swap-btn</property>
+		<factor>-0.001</factor>
+		<axis>
+			<x>1</x>
+		</axis>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<object-name>trt800h.mode_btn</object-name>
+		<action>
+			<button>0</button>
+			<binding>
+				<command>property-cycle</command>
+				<property>instrumentation/transponder/inputs/knob-mode</property>
+				<value>5</value>
+				<value>4</value>
+				<value>1</value>
+			</binding>
+			<binding>
+				<command>property-assign</command>
+				<property>instrumentation/trt800h/mode-btn</property>
+				<value>1</value>
+			</binding>
+			<mod-up>
+				<binding>
+					<command>property-assign</command>
+					<property>instrumentation/trt800h/mode-btn</property>
+					<value>0</value>
+				</binding>
+			</mod-up>
+		</action>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>trt800h.mode_btn</object-name>
+		<property>instrumentation/trt800h/mode-btn</property>
+		<factor>-0.001</factor>
+		<axis>
+			<x>1</x>
+		</axis>
+	</animation>
+		
+
+</PropertyList>

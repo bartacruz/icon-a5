@@ -1,6 +1,4 @@
 
-var true=1;
-var false=0;
 
 var startswith=func(string,start) {
     if(substr(string,0,size(start)) == start)

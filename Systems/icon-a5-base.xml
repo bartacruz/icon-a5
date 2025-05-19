@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+    <controls>
+        <key type="int">0</key>
+        <gear>
+            <brake-parking type="double">1</brake-parking>
+            <gear-down-actual type="bool">true</gear-down-actual>
+        </gear>
+        <switches>
+            <seawings type="int">0</seawings>
+            <headlights type="int">0</headlights>
+            <taxi type="int">0</taxi>
+            <cockpit type="int">1</cockpit>
+            <bilge type="int">0</bilge>
+            <master type="int">0</master>
+        </switches>
+    </controls>
+
+    <limits>
+        <vne>120</vne>
+
+        <max-positive-g>2.5</max-positive-g>
+        <max-negative-g>-0.5</max-negative-g>
+
+    </limits>
+    <instrumentation>
+        <map>
+            <serviceable type="bool">1</serviceable>
+            <controls>
+                <zoom_primary type="int">12</zoom_primary>
+                <zoom_secondary type="int">9</zoom_secondary>
+            </controls>
+        </map>
+    </instrumentation>
+    <nasal>
+        <atr833_ii>
+            <file>Models/Instruments/ATR833-II/atr833-ii.nas</file>
+        </atr833_ii>
+        <trt800h>
+            <file>Models/Instruments/TRT800H/trt800h.nas</file>
+        </trt800h>
+        <tablet>
+            <file>Models/Instruments/tablet/tablet.nas</file>
+        </tablet>
+        <a5>
+            <file>Aircraft/icon-a5/Nasal/electrical.nas</file>
+            <file>Aircraft/icon-a5/Nasal/util.nas</file>
+            <file>Aircraft/icon-a5/Nasal/misc.nas</file>
+            <file>Aircraft/Generic/limits.nas</file>
+        </a5>
+    </nasal>
+</PropertyList>

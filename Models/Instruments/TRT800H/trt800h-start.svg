@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="128"
+   height="64"
+   viewBox="0 0 128 64"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.2 (1:1.1+202202050950+0a00cf5339)"
+   sodipodi:docname="atr833-ii-start.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:document-units="px"
+     showgrid="false"
+     units="px"
+     width="128px"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:zoom="6.5109374"
+     inkscape:cx="47.688986"
+     inkscape:cy="33.866091"
+     inkscape:window-width="1680"
+     inkscape:window-height="991"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1">
+    <sodipodi:guide
+       position="0,64"
+       orientation="-1,0"
+       id="guide824"
+       inkscape:label=""
+       inkscape:locked="false"
+       inkscape:color="rgb(0,0,255)" />
+    <sodipodi:guide
+       position="128,0"
+       orientation="-1,0"
+       id="guide826"
+       inkscape:label=""
+       inkscape:locked="false"
+       inkscape:color="rgb(0,0,255)" />
+    <sodipodi:guide
+       position="39.376986,44.76725"
+       orientation="0,-1"
+       id="guide7863" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Ebene 1"
+     id="layer1"
+     style="display:inline;opacity:1"
+     inkscape:groupmode="layer">
+    <text
+       xml:space="preserve"
+       style="font-size:17.628px;line-height:129%;font-family:OLED_5x14;-inkscape-font-specification:OLED_5x14;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#e6e619;fill-opacity:1;stroke:none;stroke-width:0.661048px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="4.411768"
+       y="19.915888"
+       id="text4169"
+       transform="scale(1.4190079,0.70471772)"><tspan
+         sodipodi:role="line"
+         id="tspan4167"
+         x="4.411768"
+         y="19.915888"
+         style="stroke-width:0.661048px">TRT800H</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:17.628px;line-height:129%;font-family:OLED_5x14;-inkscape-font-specification:OLED_5x14;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#e6e619;fill-opacity:1;stroke:none;stroke-width:0.661048px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="15.916657"
+       y="39.170933"
+       id="text2500"
+       transform="scale(1.4190079,0.70471772)"><tspan
+         sodipodi:role="line"
+         id="tspan2498"
+         x="15.916657"
+         y="39.170933"
+         style="stroke-width:0.661048px">V  6 4</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:11.4747px;line-height:129%;font-family:OLED_5x14;-inkscape-font-specification:OLED_5x14;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#e6e619;fill-opacity:1;stroke:none;stroke-width:0.430299px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="4.8580284"
+       y="67.523781"
+       id="text3464"
+       transform="scale(1.4190079,0.70471772)"><tspan
+         sodipodi:role="line"
+         id="tspan3462"
+         x="4.8580284"
+         y="67.523781"
+         style="stroke-width:0.430299px">FGPA VERS   106</tspan></text>
+  </g>
+</svg>

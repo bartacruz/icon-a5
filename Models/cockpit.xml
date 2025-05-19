@@ -9,17 +9,34 @@
 
   <model>
     <name>radio</name>
-    <path>Aircraft/icon-a5/Models/Instruments/radio.xml</path>
+    <path>Aircraft/icon-a5/Models/Instruments/ATR833-II/atr833-ii.xml</path>
     <offsets>
-      <pitch-deg>0</pitch-deg>   
-      <heading-deg>180</heading-deg>
-      <roll-deg>0</roll-deg>
-      <x-m>-2.0702</x-m>
+      <pitch-deg>-10</pitch-deg>   
+      <x-m>-2.059</x-m>
       <y-m>-0.05</y-m>
-      <z-m>-0.298264</z-m>
+      <z-m>-0.297</z-m> -->
     </offsets>
   </model>
-
+  <model>
+    <name>transponder</name>
+    <path>Aircraft/icon-a5/Models/Instruments/TRT800H/trt800h.xml</path>
+    <offsets>
+      <pitch-deg>-10</pitch-deg>   
+      <x-m>-2.059</x-m>
+      <y-m> 0.05</y-m>
+      <z-m>-0.297</z-m> -->
+    </offsets>
+  </model>
+  <model>
+    <name>tablet</name>
+    <path>Aircraft/icon-a5/Models/Instruments/tablet/tablet.xml</path>
+    <offsets>
+      <pitch-deg>-10</pitch-deg>   
+      <x-m>-2.12</x-m>
+      <y-m> 0</y-m>
+      <z-m>-0.219</z-m> -->
+    </offsets>
+  </model>
   <!-- Object groups-->
 
   <animation>
@@ -154,18 +171,18 @@
 
   <!-- GPS glows -->
 
-  <!-- <animation> -->
-  <!--   <type>material</type> -->
-  <!--   <object-name>gps display</object-name> -->
-  <!--   <condition> -->
-  <!--     <property>systems/electrical/outputs/cockpit</property> -->
-  <!--   </condition> -->
-  <!--   <emission> -->
-  <!--     <red>0.4</red> -->
-  <!--     <green>0.4</green> -->
-  <!--     <blue>0.4</blue> -->
-  <!--   </emission>  -->
-  <!-- </animation> -->
+  <animation>
+    <type>material</type>
+    <object-name>gps.display</object-name>
+    <condition>
+      <property>systems/electrical/outputs/cockpit</property>
+    </condition>
+    <emission>
+      <red>0.4</red>
+      <green>0.4</green>
+      <blue>0.4</blue>
+    </emission> 
+  </animation>
 
   <!-- MAIN GAUGES -->
 
