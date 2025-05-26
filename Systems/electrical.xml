@@ -36,6 +36,11 @@
 
     <component>
       <kind type="string">output</kind>
+      <name type="string">Fuel Pump</name>
+      <prop type="string">/systems/electrical/outputs/fuel-pump</prop>
+    </component>
+    <component>
+      <kind type="string">output</kind>
       <name type="string">Gear</name>
       <prop type="string">/systems/electrical/outputs/gear</prop>
     </component>
@@ -144,6 +149,10 @@
     <connector>
       <input type="string">Primary bus</input>
       <output type="string">Gear</output>
+    </connector>
+    <connector>
+      <input type="string">Primary bus</input>
+      <output type="string">Fuel Pump</output>
     </connector>
 
     <connector>

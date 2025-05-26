@@ -1,6 +1,14 @@
 <?xml version="1.0"?>
 
 <PropertyList>
+    <sim>
+    <aircraft-data>
+        <path>instrumentation/comm[0]/frequencies/selected-mhz</path>
+        <path>instrumentation/comm[0]/frequencies/standby-mhz</path>
+    </aircraft-data>
+    </sim>
+    <icon-a5 include="Systems/icon-a5-engine.xml"></icon-a5>
+    <engines include="Systems/icon-a5-init-engines.xml" />
     <controls>
         <key type="int">0</key>
         <gear>
@@ -15,6 +23,9 @@
             <bilge type="int">0</bilge>
             <master type="int">0</master>
         </switches>
+        <fuel>
+            <selected-tank type="int">0</selected-tank>
+          </fuel>
     </controls>
 
     <limits>
@@ -44,9 +55,12 @@
             <file>Models/Instruments/tablet/tablet.nas</file>
         </tablet>
         <a5>
+            <file>Aircraft/icon-a5/Nasal/icon-a5-engine.nas</file>
+            <file>Aircraft/icon-a5/Nasal/icon-a5-fuel.nas</file>
             <file>Aircraft/icon-a5/Nasal/electrical.nas</file>
             <file>Aircraft/icon-a5/Nasal/util.nas</file>
             <file>Aircraft/icon-a5/Nasal/misc.nas</file>
+            <file>Aircraft/icon-a5/Nasal/onwater.nas</file>
             <file>Aircraft/Generic/limits.nas</file>
         </a5>
     </nasal>

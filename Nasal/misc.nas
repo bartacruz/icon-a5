@@ -3,7 +3,7 @@
 
 var oil_pressure_lowpass=aircraft.lowpass.new(0.5);
 var cht_lowpass=aircraft.lowpass.new(15.0);
-var aoa_lowpass=aircraft.lowpass.new(2.0);
+var aoa_lowpass=aircraft.lowpass.new(1.2);
 
 var update_key=func() {
     var key=getprop("/controls/key");
@@ -56,8 +56,8 @@ setlistener("/controls/key",update_key);
 var initialized=0;
 
 var update=func {
-    update_oil();
-    update_cht();
+    # update_oil();
+    # update_cht();
     update_aoa();
     settimer(update,0.2);
 };
@@ -70,8 +70,8 @@ var init=func {
 }
 
 var reinit=func() {
-    oil_pressure_lowpass.set(0.0);
-    cht_lowpass.set(getprop("/environment/temperature-degf"));
+    # oil_pressure_lowpass.set(0.0);
+    # cht_lowpass.set(getprop("/environment/temperature-degf"));
     aoa_lowpass.set(getprop("/orientation/alpha-deg"));
 }
 
