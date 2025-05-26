@@ -25,11 +25,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.35"
-     inkscape:cx="868.57142"
-     inkscape:cy="748.57142"
+     inkscape:zoom="0.24748737"
+     inkscape:cx="494.97475"
+     inkscape:cy="731.35044"
      inkscape:document-units="px"
-     inkscape:current-layer="g2-6"
+     inkscape:current-layer="layer1"
      showgrid="false"
      units="px"
      inkscape:pagecheckerboard="true"
@@ -193,12 +193,12 @@
        id="rect1642"
        width="522.7027"
        height="1110.1786"
-       x="1397.3158"
+       x="1396.892"
        y="-121.06413" />
     <g
        id="g4"
        inkscape:label="GSpeed"
-       transform="matrix(1.7643185,0,0,1.7643185,-1437.6079,46.185053)">
+       transform="matrix(1.6397119,0,0,1.6397119,-1229.5821,60.283067)">
       <text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:100%;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -237,7 +237,7 @@
     <g
        id="g3"
        inkscape:label="Alt"
-       transform="matrix(1.7643185,0,0,1.7643185,-1966.9897,320.75442)">
+       transform="matrix(1.6397119,0,0,1.6397119,-1721.5757,315.46073)">
       <text
          id="text1650"
          y="106.19391"
@@ -276,7 +276,7 @@
     <g
        id="g1"
        inkscape:label="Track"
-       transform="matrix(1.7643185,0,0,1.7643185,-3034.3488,-228.18056)">
+       transform="matrix(1.6397119,0,0,1.6397119,-2713.5516,-194.70521)">
       <text
          id="text1658"
          y="106.19391"
@@ -304,7 +304,7 @@
     <g
        id="g2"
        inkscape:label="vs"
-       transform="matrix(1.7643185,0,0,1.7643185,-2520.5534,595.21009)">
+       transform="matrix(1.6397119,0,0,1.6397119,-2236.0435,570.53273)">
       <text
          id="vertspeed"
          y="187.92157"
@@ -359,23 +359,25 @@
     <g
        id="g2-6"
        inkscape:label="Range"
-       transform="matrix(1.2316602,0,0,1.2316602,-3166.2563,749.92073)">
+       transform="matrix(0.91855432,0,0,0.91855432,-2081.8695,791.29102)"
+       style="fill:#2b0000">
       <text
          id="text1658-7"
          y="106.19391"
          x="2688.4053"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:100%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:100%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#2b0000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          xml:space="preserve"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:37.3333px;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans'"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:37.3333px;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';fill:#2b0000"
            y="106.19391"
            x="2688.4053"
            id="tspan1656-5"
            sodipodi:role="line">Range</tspan></text>
       <g
-         id="g15">
+         id="g15"
+         style="fill:#2b0000">
         <text
            xml:space="preserve"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:35.348px;line-height:100%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.8837px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:35.348px;line-height:100%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#2b0000;fill-opacity:1;stroke:none;stroke-width:0.8837px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
            x="2748.6108"
            y="182.92157"
            id="text1666-2"><tspan
@@ -383,10 +385,10 @@
              id="tspan1664-9"
              x="2748.6108"
              y="182.92157"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32.9915px;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';text-align:start;text-anchor:start;stroke-width:0.8837px">nm</tspan></text>
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32.9915px;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';text-align:start;text-anchor:start;fill:#2b0000;stroke-width:0.8837px">nm</tspan></text>
         <text
            xml:space="preserve"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:90.7254px;line-height:100%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2.26814px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:90.7254px;line-height:100%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#2b0000;fill-opacity:1;stroke:none;stroke-width:2.26814px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
            x="2746.7842"
            y="182.92157"
            id="range"
@@ -395,7 +397,7 @@
              id="tspan1690-5"
              x="2746.7842"
              y="182.92157"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:84.677px;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';text-align:end;text-anchor:end;stroke-width:2.26814px">99.9</tspan></text>
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:84.677px;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';text-align:end;text-anchor:end;fill:#2b0000;stroke-width:2.26814px">99.9</tspan></text>
       </g>
     </g>
   </g>

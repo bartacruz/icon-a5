@@ -80,9 +80,9 @@ var canvas_tablet_main = {
 		me["time.utc"].setText(sprintf("%02d",getprop(time_base~"hour"))~":"~sprintf("%02d",getprop(time_base~"minute")));
 		me["groundspeed"].setText(sprintf("%3d", math.round(getprop("/velocities/groundspeed-kt"))));
 		me["altitude"].setText(sprintf("%5d", math.round(getprop("/position/altitude-ft"))));
-		me["vertspeed"].setText(sprintf("%+4d", math.round((getprop("/velocities/vertical-speed-fps")/60)*1000)));
+		me["vertspeed"].setText(sprintf("%+4d", math.round(getprop("/velocities/vertical-speed-fps")*60)));
 		me["track"].setText(sprintf("%3d", math.round(getprop("/orientation/track-deg")))~"°");
-		# me["range"].setText(sprintf("%.1f", tablet_map._map-getRange()));
+		# me["range"].setText(sprintf("%.1f", tablet_map._map.getRange()));
 	}
 	
 };
@@ -159,6 +159,7 @@ setlistener("sim/signals/fdm-initialized", func {
 		# "view": [1224, 875],
 		"mipmapping": 1
 	});
+	# tablet_display.addPlacement({"node": "gps.display"});
 	tablet_display.addPlacement({"node": "tablet-screen"});
 	var groupMap = tablet_display.createGroup("map");
 	var groupMain = tablet_display.createGroup("main");
