@@ -105,12 +105,12 @@ var DeltaTsecs		= 1.66;							# Seconds for CHT to change 1 degree when engine r
 
 var OILV_DELTA_WARMUP	= 0.001;						# Viscosity increment per cycle when warming up
 var OILV_DELTA_COOLDN	= 0.0001;						# Viscosity decrement per cycle when cooling down
-var MAX_OK_OILT		= 118;							# Maximum best oil temperature
-var MIN_OK_OILT		= 60;							# Minimum best oil temperature
-var MIN_OILP		= 25;							# Minimum acceptable oil pressure
-var MAX_OILP		= 115;							# Highest value oil pressure will register
-var MAX_OK_OILP		= 95;							# Maximum best oil pressure
-var MIN_OK_OILP		= 55;							# Minimum best oil pressure
+var MAX_OK_OILT		= 138;							# Maximum best oil temperature
+var MIN_OK_OILT		= 70;							# Minimum best oil temperature
+var MIN_OILP		= 15;							# Minimum acceptable oil pressure
+var MAX_OILP		= 100;							# Highest value oil pressure will register
+var MAX_OK_OILP		= 75;							# Maximum best oil pressure
+var MIN_OK_OILP		= 25;							# Minimum best oil pressure
 var oilt_target 	= (MAX_OK_OILT-MIN_OK_OILT)/2 + MIN_OK_OILT;		# Calculate a nice mid-range temp value to seek
 var oilp_target 	= (MAX_OK_OILP-MIN_OK_OILP)/2 + MIN_OK_OILP;		# Calculate a nice mid-range pressure value to seek
 
@@ -308,6 +308,7 @@ var engine_update = func (i) {						# i = engine number
       var envtemp = getprop("/environment/temperature-degc");
       var oilt = (oilt_target - envtemp) * (1-oilv) + envtemp;
       setprop(eprop~"oiltempc",oilt);					# Save oilt as deg C
+      setprop(eprop~"oiltempf",(oilt * 9/5)+32);					# Save oilt as deg C
     }
 
 									# For prop animation, to get rid of at-rest windmilling

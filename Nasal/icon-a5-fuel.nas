@@ -159,38 +159,14 @@ var fuel_update_loop = func {						# Subtract consumed fuel from tanks
       if (!satisfied) {							# Engine's fuel needs met?
         engine.getNode("out-of-fuel").setBoolValue(1);			# If not, kill engine
       }
-									# Now let's try to feed the sump
-									# Build list of selected non-sump tanks having fuel remaining
-      var fueled_tanks = [];
-      if (tank_list[1].getChild("level-lbs").getValue() > 0 and (selected==1 or selected==0)) { append(fueled_tanks,1); }
-      if (tank_list[2].getChild("level-lbs").getValue() > 0 and (selected==2 or selected==0)) { append(fueled_tanks,2); }
-    
-									# Replenish sump from tanks having fuel
-      var fueled = size(fueled_tanks);					# Number of tanks having fuel
-      for(var i=0; i<fueled; i+=1) {					# Foreach tank having fuel
-        var portion = consumed / fueled;				# Divide fuel into portions to distribute evenly
-        sump_lbs += portion;						# Add portion to sump
-        var tank = fueled_tanks[i];					# Tank ID
-#        var tank_lbs = tank_list[tank].getChild("level-gal_us").getValue() * PPG;
-        var tank_lbs = tank_list[tank].getChild("level-lbs").getValue();
-        tank_lbs -= portion;						# Deduct portion from tank qty
-        if (tank_lbs < 0) {
-          tank_lbs = 0;
-        }
-									# Update tank properties
-#        tank_list[tank].getChild("level-gal_us").setDoubleValue(tank_lbs/PPG);
-        tank_list[tank].getChild("level-lbs").setDoubleValue(tank_lbs);
-
-      }
-									# Update sump properties
+      # Update sump properties
 #      tank_list[0].getChild("level-gal_us").setDoubleValue(sump_lbs/PPG);
       tank_list[0].getChild("level-lbs").setDoubleValue(sump_lbs);
-
     } # if engine running
   } # fuel draw routines
   engine.getNode("fuel-consumed-lbs-adj").setDoubleValue(0);		# Reset engine's consumed fuel
 
-									# Total fuel properties
+	# Total fuel properties
   var lbs = 0;
   var gals = 0;
   var cap = 0;

@@ -8,11 +8,11 @@
   <cylinders type="float">4</cylinders>
   <rpm-max type="float">5800</rpm-max>
   <power-max type="float">100</power-max>
-  <cht-redline type="float">400</cht-redline>				<!-- Could be cert redline or user's personal limit; used for instrument animations -->
+  <cht-redline type="float">300</cht-redline>				<!-- Could be cert redline or user's personal limit; used for instrument animations -->
   <volumetric-efficiency type="float">0.95</volumetric-efficiency>	<!-- Get from engine data or make a guestimate -->
-  <thermal-efficiency type="float">0.283</thermal-efficiency>		<!-- Get from engine datasheet or calculate an estimate -->
-  <afr-base type="float">0.08</afr-base>				<!-- Unadjusted full-power, full-rich air-fuel ratio -->
-  <idle-min-inhg>10</idle-min-inhg>					<!-- MP to seek at sea level idle -->
+  <thermal-efficiency type="float">0.483</thermal-efficiency>		<!-- Get from engine datasheet or calculate an estimate -->
+  <afr-base type="float">0.068</afr-base>				<!-- Unadjusted full-power, full-rich air-fuel ratio -->
+  <idle-min-inhg>12</idle-min-inhg>					<!-- MP to seek at sea level idle -->
   <use-AMC type="bool">0</use-AMC>					<!-- Enable if engine uses Automatic Mixture Control (alititude compensator) -->
   <use-autoenrich type="bool">1</use-autoenrich>			<!-- Enable if engine has an autoenrich power feature -->
   <autoenrich-throttle-min type="float">0.65</autoenrich-throttle-min>	<!-- Minimum throttle setting where autoenrich starts to kick in -->
@@ -68,16 +68,15 @@ CHTs will also be reduced somewhat by airspeed.
 -->
 
   <table-temps>
-    <temps><afr type="float">0.0400</afr><egt type="int">1000</egt><cht type="int">250</cht></temps> <!-- lean burn limit -->
-    <temps><afr type="float">0.0500</afr><egt type="int">1000</egt><cht type="int">250</cht></temps> <!-- lean power limit -->
-    <temps><afr type="float">0.0625</afr><egt type="int">1450</egt><cht type="int">345</cht></temps> <!-- best economy -->
-    <temps><afr type="float">0.0712</afr><egt type="int">1500</egt><cht type="int">433</cht></temps> <!-- peak EGT -->
-    <temps><afr type="float">0.0756</afr><egt type="int">1450</egt><cht type="int">450</cht></temps> <!-- peak CHT -->
-    <temps><afr type="float">0.0800</afr><egt type="int">1420</egt><cht type="int">440</cht></temps> <!-- best power -->
-    <temps><afr type="float">0.0870</afr><egt type="int">1350</egt><cht type="int">375</cht></temps>
-    <temps><afr type="float">0.1000</afr><egt type="int">1250</egt><cht type="int">355</cht></temps> <!-- WOT, full rich -->
-    <temps><afr type="float">0.1250</afr><egt type="int">1250</egt><cht type="int">350</cht></temps> <!-- rich power limit -->
-    <temps><afr type="float">0.1800</afr><egt type="int">1250</egt><cht type="int">350</cht></temps> <!-- rich burn limit -->
+    <temps><afr type="float">0.0400</afr><egt type="int">1000</egt><cht type="int">120</cht></temps> <!-- lean burn limit -->
+    <temps><afr type="float">0.0500</afr><egt type="int">1000</egt><cht type="int">120</cht></temps> <!-- lean power limit -->
+    <temps><afr type="float">0.0625</afr><egt type="int">1450</egt><cht type="int">167</cht></temps> <!-- best economy -->
+    <temps><afr type="float">0.0712</afr><egt type="int">1500</egt><cht type="int">290</cht></temps> <!-- peak EGT -->
+    <temps><afr type="float">0.0756</afr><egt type="int">1450</egt><cht type="int">302</cht></temps> <!-- peak CHT -->
+    <temps><afr type="float">0.0800</afr><egt type="int">1420</egt><cht type="int">230</cht></temps> <!-- best power -->
+    <temps><afr type="float">0.1000</afr><egt type="int">1250</egt><cht type="int">200</cht></temps> <!-- WOT, full rich -->
+    <temps><afr type="float">0.1250</afr><egt type="int">1250</egt><cht type="int">200</cht></temps> <!-- rich power limit -->
+    <temps><afr type="float">0.1800</afr><egt type="int">1250</egt><cht type="int">200</cht></temps> <!-- rich burn limit -->
   </table-temps>
 
 <!--
@@ -98,8 +97,8 @@ These values are defaults. They could be randomized at run-time.
     <difs><egt type="float">1.010</egt></difs>
     <difs><egt type="float">0.990</egt></difs>
     <difs><egt type="float">1.000</egt></difs>
-    <difs><egt type="float">0.970</egt></difs>
-    <difs><egt type="float">0.986</egt></difs>
+    <!-- <difs><egt type="float">0.970</egt></difs>
+    <difs><egt type="float">0.986</egt></difs> -->
   </table-cyldifs>
 
 <!--

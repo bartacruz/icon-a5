@@ -6,8 +6,9 @@
 ######################################################################
 
 setlistener("/sim/presets/latitude-deg", func {
-  print("*** ON WATER ? ***");
-  # settimer(func {
+  
+  settimer(func {
+    print("*** ON WATER ? ***");
     #var typ = getprop("/sim/type");
     var lat = getprop("/position/latitude-deg");
     var lon = getprop("/position/longitude-deg");
@@ -21,5 +22,5 @@ setlistener("/sim/presets/latitude-deg", func {
       setprop("controls/gear/gear-down-actual",0);
       setprop("controls/gear/gear-down",0);
     }
-  # }, 8);
+  }, 5);
 }, 1);
