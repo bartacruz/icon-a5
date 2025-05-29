@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+
+<PropertyList  include="Systems/icon-a5-base.xml">
+
+  <sim>
+    <description>Icon A5 - New </description>
+    <long-description>The Icon A5 is an amphibious light sport aircraft.</long-description>
+    <author n="0">Forest Ka</author>
+    <author n="1">Julio Santa Cruz</author>
+
+    <status>beta</status>
+    <variant-of>icon-a5</variant-of>
+    <rating>
+      <FDM type="int">1</FDM>
+      <systems type="int">3</systems>
+      <cockpit type="int">3</cockpit>
+      <model type="int">3</model>
+    </rating>
+    <previews>
+			<preview>
+				<type>exterior</type>
+				<splash type="bool">true</splash>
+				<path>Previews/preview1.png</path>
+      </preview>
+      <preview>
+				<type>exterior</type>
+				<splash type="bool">true</splash>
+				<path>Previews/preview2.png</path>
+      </preview>
+    </previews>
+    <thumbnail>thumbnail.png</thumbnail>
+    <flight-model>yasim</flight-model>
+    <aero>icon-a5-new-yasim</aero>
+
+    <model>
+      <path>Aircraft/icon-a5/Models/icon-a5-model.xml</path>
+    </model>
+
+    <sound>
+      <path>Aircraft/icon-a5/Sounds/icon-a5-sound.xml</path>
+    </sound>
+
+    <view n="0">
+      <internal>true</internal>
+      <config>
+        <x-offset-m>-0.3</x-offset-m>
+        <y-offset-m>-0.01</y-offset-m>
+        <z-offset-m>-1.45</z-offset-m>
+        <default-field-of-view-deg type="double">65</default-field-of-view-deg>
+        <pitch-offset-deg>-5</pitch-offset-deg>
+      </config>
+    </view>
+
+    <weight n="0">
+      <name>Pilot</name>
+      <weight-lb>180</weight-lb>
+      <max-lb>300</max-lb>
+    </weight>
+
+    <weight n="1">
+      <name>Passenger</name>
+      <weight-lb>0</weight-lb>
+      <max-lb>300</max-lb>
+    </weight>
+
+    <weight n="2">
+      <name>Baggage</name>
+      <weight-lb>0</weight-lb>
+      <max-lb>60</max-lb>
+    </weight>
+
+    <systems include="Systems/electrical.xml">
+    </systems>
+
+    <checklists include="Tutorials/checklists.xml"/>
+
+  </sim>
+
+  <options>
+    <attitude type="bool">false</attitude>
+  </options>
+
+  <consumables>
+    <fuel>
+      <tank n="0">
+        <name>Main</name>
+        <capacity-gal_us type="double">20</capacity-gal_us>
+        <level-gal_us type="double">20</level-gal_us>
+        <selected type="bool">true</selected>
+      </tank>
+    </fuel>
+  </consumables>
+
+</PropertyList>

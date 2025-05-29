@@ -7,8 +7,8 @@
         <path>instrumentation/comm[0]/frequencies/standby-mhz</path>
     </aircraft-data>
     </sim>
-    <icon-a5 include="Systems/icon-a5-engine.xml"></icon-a5>
-    <engines include="Systems/icon-a5-init-engines.xml" />
+    <icon-a5 include="icon-a5-engine.xml"></icon-a5>
+    <engines include="icon-a5-init-engines.xml" />
     <controls>
         <key type="int">0</key>
         <gear>

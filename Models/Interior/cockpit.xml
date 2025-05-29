@@ -2,8 +2,7 @@
 
 <PropertyList>
 
-  <path>Models/cockpit.ac</path>
-  <texture-path>./textures/cockpit</texture-path>
+  <path>cockpit.ac</path>
 
   <!-- Radio -->
 
@@ -407,7 +406,8 @@
   <animation>
     <type>rotate</type>
     <object-name>oil temp needle</object-name>
-    <property>engines/engine[0]/oil-temperature-degf</property>
+    <!-- <property>engines/engine[0]/oil-temperature-degf</property> -->
+    <property>engines/engine[0]/oiltempf</property>
     <interpolation>
       <entry>
 	<ind>0</ind>
@@ -443,7 +443,8 @@
   <animation>
     <type>rotate</type>
     <object-name>oil pressure needle</object-name>
-    <property>engines/engine[0]/oil-pressure-psi</property>
+    <!-- <property>engines/engine[0]/oil-pressure-psi</property> -->
+    <property>engines/engine[0]/oil-press</property>
     <interpolation>
       <entry>
 	<ind>0</ind>
@@ -471,7 +472,8 @@
   <animation>
     <type>rotate</type>
     <object-name>cylinder head temp needle</object-name>
-    <property>engines/engine[0]/cht-degf</property>
+    <!-- <property>engines/engine[0]/cht-degf</property> -->
+    <property>engines/engine[0]/chttempf</property>
     <interpolation>
       <entry>
 	<ind>0</ind>

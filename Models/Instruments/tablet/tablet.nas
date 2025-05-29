@@ -177,8 +177,22 @@ setlistener("sim/signals/fdm-initialized", func {
 	tablet_map = groupMap.createChild("map");
 	# print("size: ", tablet_map.getSize());
 	# .setSize(1600, 1110);
-	tablet_map.setRange(10); 
-	tablet_map.setController("Aircraft position");
+	var ctrl_ns = canvas.Map.Controller.get("Aircraft position");
+	var source = ctrl_ns.SOURCES["tablet"];
+	if (source == nil) {
+		var source = ctrl_ns.SOURCES["tablet"] = {
+			getPosition: func subvec(geo.aircraft_position().latlon(), 0, 2),
+			getAltitude: func getprop('/position/altitude-ft'),
+			getHeading:  func {
+				if (me.aircraft_heading)
+					getprop('/orientation/heading-deg')
+				else 0
+			},
+			aircraft_heading: 1,
+		};
+	}
+	tablet_map.setRange(2); 
+	tablet_map.setController("Aircraft position", "tablet");
 	# tablet_map.set("clip-frame", canvas.Element.LOCAL);
 	# tablet_map.set("clip", "1110, 1110");
 	# tablet_map.setTranslation(800,600);
