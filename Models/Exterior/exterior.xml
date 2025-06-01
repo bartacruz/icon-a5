@@ -39,9 +39,8 @@
 
   <!-- Hide exterior if inside -->
 
-  <animation>
+  <!-- <animation>
     <type>select</type>
-    <!--    <object-name>exterior</object-name> -->
     <object-name>canopy frame</object-name>
     <object-name>windshield</object-name>
     <object-name>left window</object-name>
@@ -54,16 +53,40 @@
 	      <property>sim/current-view/internal</property>
       </not>
     </condition>
+  </animation> -->
+
+  <animation>
+    <type>pick</type>
+    <object-name>canopy frame</object-name>
+    <object-name>windshield</object-name>
+    <object-name>left window</object-name>
+    <object-name>right window</object-name>
+    
+    <action>
+			<button>0</button>
+			<binding>
+				<command>nasal</command>
+				<script>a5.canopy.toggle()</script>
+			</binding>
+		</action>
   </animation>
-
-
   <animation>
     <type>rotate</type>
     <object-name>canopy frame</object-name>
     <object-name>windshield</object-name>
     <object-name>left window</object-name>
     <object-name>right window</object-name>
-    <object-name>side windows</object-name>
+    <property>/sim/model/door-positions/canopy/position-norm</property>
+    <factor>-50</factor>
+		<center>
+			<x-m>-3.0 </x-m>
+			<z-m>  -0.33 </z-m>
+		</center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
   </animation>
   <!-- Headlights -->
 
@@ -164,21 +187,28 @@
   </animation>
 
   <!-- SHINYNESS-->
-
-  <animation>
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+		<!-- <inherits-from>Aircraft/icon-a5/Models/Effects/Glass/glass</inherits-from> -->
+    <object-name>windshield</object-name>
+    <object-name>left window</object-name>
+    <object-name>side windows</object-name>
+  </effect>
+  <!-- <animation>
     <type>shader</type>
     <shader>chrome</shader>
     <texture>Aircraft/icon-a5/Models/glass.png</texture>
     <object-name>windshield</object-name>
     <object-name>left window</object-name>
     <object-name>side windows</object-name>
-  </animation>
+  </animation> -->
 
   <animation>
     <type>shader</type>
     <shader>chrome</shader>
-    <texture>Aircraft/icon-a5/Models/headlights.png</texture>
-    <object-name>headlights</object-name>
+    <texture>Aircraft/icon-a5/Models/Exterior/headlights.png</texture>
+    <object-name>left headlight</object-name>
+    <object-name>right headlight</object-name>
   </animation>
 
   <!-- PROPELLER -->
@@ -352,7 +382,7 @@
     <property>/gear/gear[8]/position-norm</property>
     <factor>55</factor>
     <center>
-      <x-m> 1.3453</x-m>
+      <x-m> 1</x-m>
       <y-m> 0</y-m>
       <z-m>-0.6277127</z-m>
     </center>
@@ -646,5 +676,110 @@
     </condition>
   </animation>
 
+  <model>
+		<name>model-leftheadlight</name>
+		<path>../Lights/landinglight.xml</path>
+		<offsets>
+			<x-m> -3.26087 </x-m>
+			<y-m> -0.27017</y-m>
+			<z-m> -0.533816</z-m>
+		</offsets>
+	</model>
+	<light>
+		<name>left-headlight</name>
+		<type>spot</type>
+		<position>
+			<x-m> -3.26087 </x-m>
+			<y-m> -0.27017</y-m>
+			<z-m> -0.533816</z-m>
+		</position>
+		<direction>
+			<x>-1.0</x>
+			<y> 0.0</y>
+			<z>-0.1</z>
+		</direction>
+		<ambient>
+			<r>1.0</r>
+			<g>1.0</g>
+			<b>1.0</b>
+			<a>1</a>
+		</ambient>
+		<diffuse>
+			<r>1.0</r>
+			<g>1.0</g>
+			<b>1.0</b>
+			<a>1</a>
+		</diffuse>
+		<specular>
+			<r>1.0</r>
+			<g>1.0</g>
+			<b>1.0</b>
+			<a>1</a>
+		</specular>
+		<attenuation>
+			<c>1.0</c>
+			<l>0.005</l>
+			<q>0.001</q>
+		</attenuation>
+		<spot-exponent>25</spot-exponent>
+		<spot-cutoff>35</spot-cutoff>
+		<range-m>100</range-m>
+		<dim-factor>
+			<property>systems/electrical/outputs/landing-light-norm</property>
+		</dim-factor>
+	</light>
 
+
+  <model>
+    <name>model-rightheadlight</name>
+    <path>../Lights/landinglight.xml</path>
+    <offsets>
+      <x-m> -3.26087 </x-m>
+      <y-m>  0.27017</y-m>
+      <z-m> -0.533816</z-m>
+    </offsets>
+  </model>
+  <light>
+    <name>right-headlight</name>
+    <type>spot</type>
+    <position>
+      <x-m> -3.26087 </x-m>
+      <y-m>  0.27017</y-m>
+      <z-m> -0.533816</z-m>
+    </position>
+    <direction>
+      <x>-1.0</x>
+      <y> 0.0</y>
+      <z>-0.1</z>
+    </direction>
+    <ambient>
+      <r>1.0</r>
+      <g>1.0</g>
+      <b>1.0</b>
+      <a>1</a>
+    </ambient>
+    <diffuse>
+      <r>1.0</r>
+      <g>1.0</g>
+      <b>1.0</b>
+      <a>1</a>
+    </diffuse>
+    <specular>
+      <r>1.0</r>
+      <g>1.0</g>
+      <b>1.0</b>
+      <a>1</a>
+    </specular>
+    <attenuation>
+      <c>1.0</c>
+      <l>0.005</l>
+      <q>0.001</q>
+    </attenuation>
+    <spot-exponent>25</spot-exponent>
+    <spot-cutoff>35</spot-cutoff>
+    <range-m>100</range-m>
+    <dim-factor>
+      <property>systems/electrical/outputs/landing-light-norm</property>
+    </dim-factor>
+  </light>
 </PropertyList>

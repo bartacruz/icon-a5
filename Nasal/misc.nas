@@ -4,7 +4,7 @@
 var oil_pressure_lowpass=aircraft.lowpass.new(0.5);
 var cht_lowpass=aircraft.lowpass.new(15.0);
 var aoa_lowpass=aircraft.lowpass.new(1.2);
-
+var canopy = aircraft.door.new("/sim/model/door-positions/canopy",2.5);
 var update_key=func() {
     var key=getprop("/controls/key");
     if(key == nil) {
