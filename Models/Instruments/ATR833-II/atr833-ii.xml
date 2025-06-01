@@ -191,7 +191,7 @@
 				<command>property-adjust</command>
 				<property>instrumentation/comm[0]/frequencies/standby-mhz</property>
 				<mask>integer</mask>
-				<step>1</step>
+				<factor>1</factor>
 				<min>118</min>
 				<max>136</max>
 				<resolution>1</resolution>
@@ -207,7 +207,7 @@
 				<command>property-adjust</command>
 				<property>instrumentation/comm[0]/frequencies/standby-mhz</property>
 				<mask>decimal</mask>
-				<step>0.1</step>
+				<factor>0.1</factor>
 				<min>0</min>
 				<max>1</max>
 				<resolution>0.1</resolution>
@@ -223,7 +223,7 @@
 				<command>property-adjust</command>
 				<property>instrumentation/comm[0]/frequencies/standby-mhz</property>
 				<mask>decimal</mask>
-				<step>0.008333</step>
+				<factor>0.008333</factor>
 				<min>0</min>
 				<max>1</max>
 				<resolution>0.008333</resolution>
