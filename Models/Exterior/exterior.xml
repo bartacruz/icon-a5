@@ -58,9 +58,9 @@
   <animation>
     <type>pick</type>
     <object-name>canopy frame</object-name>
-    <object-name>windshield</object-name>
+    <!-- <object-name>windshield</object-name>
     <object-name>left window</object-name>
-    <object-name>right window</object-name>
+    <object-name>right window</object-name> -->
     
     <action>
 			<button>0</button>
@@ -425,16 +425,16 @@
     <property>gear/gear[0]/position-norm</property>
     <interpolation>
       <entry>
-	<ind> 0</ind>
-	<dep> 0</dep>
+        <ind> 0</ind>
+        <dep> 0</dep>
       </entry>
       <entry>
-	<ind> 0.4</ind>
-	<dep>-90</dep>
+        <ind> 0.4</ind>
+        <dep>-90</dep>
       </entry>
       <entry>
-	<ind> 1</ind>
-	<dep>-90</dep>
+        <ind> 1</ind>
+        <dep>-90</dep>
       </entry>
     </interpolation>
     <center>
@@ -485,16 +485,16 @@
     <property>gear/gear[0]/position-norm</property>
     <interpolation>
       <entry>
-	<ind> 0</ind>
-	<dep> 0</dep>
+        <ind> 0</ind>
+        <dep> 0</dep>
       </entry>
       <entry>
-	<ind> 0.4</ind>
-	<dep> 0</dep>
+        <ind> 0.4</ind>
+        <dep> 0</dep>
       </entry>
       <entry>
-	<ind> 1</ind>
-	<dep> 45</dep>
+        <ind> 1</ind>
+        <dep> 55</dep>
       </entry>
     </interpolation>
     <center>
