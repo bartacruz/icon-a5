@@ -9,7 +9,21 @@
       <mode>looped</mode>
       <path>Aircraft/icon-a5/Sounds/Rotax912-Engine-Internal.wav</path>
       <condition>
-        <property>engines/engine[0]/running</property>
+        <and>
+          <greater-than>
+            <property>engines/engine/rpm</property>
+            <value>60</value>
+          </greater-than>
+          <or>
+            <greater-than>
+              <property>/sim/model/door-positions/canopy/position-norm</property>
+              <value>0</value>
+            </greater-than>
+            <not>
+              <property>sim/current-view/internal</property>
+            </not>
+          </or>
+        </and>
       </condition>
       <pitch>
         <property>/engines/engine[0]/rpm</property>
@@ -19,9 +33,42 @@
         <offset>0.10</offset>
       </pitch>
       <volume>
-        <property>sim/current-view/internal</property>
-        <factor>-0.25</factor>
-        <offset>1</offset>
+        <property>engines/engine[0]/running</property>
+        <factor>1</factor>
+      </volume>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </engine>
+
+    <engine>
+      <name>engine-internal</name>
+      <mode>looped</mode>
+      <path>Aircraft/icon-a5/Sounds/Rotax912-Engine-Internal.wav</path>
+      <condition>
+        <and>
+          <property>sim/current-view/internal</property>
+          <greater-than>
+            <property>engines/engine/rpm</property>
+            <value>10</value>
+          </greater-than>
+          <not>
+            <greater-than>
+              <property>/sim/model/door-positions/canopy/position-norm</property>
+              <value>0</value>
+            </greater-than>
+          </not>
+        </and>
+      </condition>
+      <pitch>
+        <property>/engines/engine[0]/rpm</property>
+        <factor>0.00037</factor>
+        <min>0</min>
+        <max>4</max>
+        <offset>0.10</offset>
+      </pitch>
+      <volume>
+        <property>engines/engine[0]/running</property>
+        <factor>0.6</factor>
       </volume>
       <reference-dist>60.0</reference-dist>
       <max-dist>1500.0</max-dist>
@@ -120,6 +167,76 @@
       <max-dist>1000</max-dist>
     </squeal>
 
+    <water-fast>
+      <name>water-fast</name>
+      <mode>looped</mode>
+      <path>Sounds/water-fast.wav</path>
+      <condition>
+        <and>
+          <greater-than>
+              <property>/velocities/groundspeed-kt</property>
+              <value>8</value>
+          </greater-than>
+          <or>
+            <property>/gear/gear[3]/wow</property>
+            <property>/gear/gear[4]/wow</property>
+            <property>/gear/gear[5]/wow</property>
+          </or>
+        </and>
+      </condition>
+      <position>
+          <x>0.0</x>
+          <y>1.1</y>
+          <z>-2.0</z>
+      </position>
+      <reference-dist>5.0</reference-dist>
+      <max-dist>200.0</max-dist>
+      <volume>
+          <property>/velocities/groundspeed-kt</property>
+          <factor>0.03</factor>
+          <offset>0.2</offset>
+          <min>0.0</min>
+          <max>1.0</max>
+      </volume>
+    </water-fast>
+
+    <water-still>
+      <name>water-still</name>
+      <mode>looped</mode>
+      <path>Sounds/water-still.wav</path>
+      <condition>
+        <and>
+          <less-than>
+              <property>/velocities/groundspeed-kt</property>
+              <value>9</value>
+          </less-than>
+          <or>
+            <property>/gear/gear[3]/wow</property>
+            <property>/gear/gear[4]/wow</property>
+            <property>/gear/gear[5]/wow</property>
+          </or>
+        </and>
+      </condition>
+      <position>
+          <x>0.0</x>
+          <y>1.1</y>
+          <z>-0.6</z>
+      </position>
+      <reference-dist>5.0</reference-dist>
+      <max-dist>200.0</max-dist>
+      <volume>
+          <property>/velocities/groundspeed-kt</property>
+          <factor>0.2</factor>
+          <offset>0.2</offset>
+          <min>0.0</min>
+          <max>1.0</max>
+      </volume>
+      <volume>
+          <property>/sim/model/door-positions/canopy/position-norm</property>
+          <offset>0.2</offset>
+      </volume>
+    </water-still>
+
     <flap>
       <name>flaps</name>
       <mode>in-transit</mode>
@@ -135,7 +252,7 @@
     <canopy>
       <name>canopy</name>
       <mode>in-transit</mode>
-      <path>Sounds/pneumatic-door-mono.wav</path>
+      <path>Sounds/pneumatic-door.wav</path>
       <property>/sim/model/door-positions/canopy/position-norm</property>
     </canopy>
 
